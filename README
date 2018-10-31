@@ -5,6 +5,12 @@
 # SPDX-License-Identifier:	GPL-2.0+
 #
 
+生成uboot命令:
+export ARCH=arm
+export COMPILE_CROSS=arm-linux-gnueabihf-
+make a33_jiang_defconfig
+make
+
 Summary:
 ========
 
