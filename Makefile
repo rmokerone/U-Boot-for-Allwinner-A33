@@ -1,6 +1,9 @@
 #
 # SPDX-License-Identifier:	GPL-2.0+
 #
+#
+ARCH = arm
+CROSS_COMPILE = arm-linux-gnueabihf-
 
 VERSION = 2017
 PATCHLEVEL = 11

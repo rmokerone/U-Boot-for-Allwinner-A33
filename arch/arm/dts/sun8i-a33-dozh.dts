@@ -52,6 +52,10 @@
 		ethernet0 = &sdio_wifi;
 	};
 
+    chosen {
+        stdout-path = "serial0:115200n8";
+    };
+
 	q8_hardwaremgr {
 		compatible = "allwinner,sunxi-q8-hardwaremgr";
 		touchscreen-i2c-bus = <&i2c0>;
@@ -72,6 +76,12 @@
 		/* The esp8089 needs 200 ms after driving wifi-en high */
 		post-power-on-delay-ms = <200>;
 	};
+};
+
+&r_uart {
+    pinctrl-names = "default";
+    pinctrl-0 = <&r_uart_pins_a>;
+    status = "okay";
 };
 
 &ehci0 {
