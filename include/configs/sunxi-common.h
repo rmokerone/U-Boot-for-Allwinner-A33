@@ -248,7 +248,7 @@ extern int soft_i2c_gpio_scl;
 #endif
 
 #ifdef CONFIG_REQUIRE_SERIAL_CONSOLE
-#if CONFIG_CONS_INDEX == 1
+#if CONFIG_CONS_INDEX == 2
 #ifdef CONFIG_MACH_SUN9I
 #define OF_STDOUT_PATH		"/soc/serial@07000000:115200"
 #else

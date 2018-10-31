@@ -48,9 +48,14 @@
 / {
 	aliases {
 		serial0 = &r_uart;
+        serial1 = &uart1;
 		/* Make u-boot set mac-address for wifi without an eeprom */
 		ethernet0 = &sdio_wifi;
 	};
+
+    chosen {
+        stdout-path = "serial1:115200n8";
+    };
 
 	q8_hardwaremgr {
 		compatible = "allwinner,sunxi-q8-hardwaremgr";
@@ -90,6 +95,12 @@
 	sdio_wifi: sdio_wifi@1 {
 		reg = <1>;
 	};
+};
+
+&uart1 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&uart1_pins_a>;
+    status = "okay";
 };
 
 &mmc1_pins_a {
